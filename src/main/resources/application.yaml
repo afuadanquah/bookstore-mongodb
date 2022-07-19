@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: bookstore
+      port: 27017
+      host: localhost
