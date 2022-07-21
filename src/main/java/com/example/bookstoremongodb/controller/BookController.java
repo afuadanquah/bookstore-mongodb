@@ -2,7 +2,6 @@ package com.example.bookstoremongodb.controller;
 
 import com.example.bookstoremongodb.model.Book;
 import com.example.bookstoremongodb.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +27,7 @@ public class BookController {
 
     @PostMapping("/postBooks")
     public ResponseEntity<List<Book>> saveBooks(@RequestBody List<Book> books){
-        List addBooks =  bookService.saveBooks(books);
+        List addBooks =  bookService.saveSeveralBooks(books);
 //        System.out.println(books);
 
         return new ResponseEntity<>(addBooks, HttpStatus.CREATED);

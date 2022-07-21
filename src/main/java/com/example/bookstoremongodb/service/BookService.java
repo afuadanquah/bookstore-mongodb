@@ -3,8 +3,6 @@ package com.example.bookstoremongodb.service;
 import com.example.bookstoremongodb.model.Book;
 import com.example.bookstoremongodb.repository.BookRepo;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -24,20 +22,8 @@ public class BookService {
         return bookRepo.findAll();
     }
 
-    public List<Book> saveBooks(List<Book> books) {
+    public List<Book> saveSeveralBooks(List<Book> books) {
 
-        List<Book> bookss = new ArrayList<>();
-
-
-
-//        for (int i = 0; i < books; i++) {
-//            books.add(book);
-//
-//            return bookRepo.saveAll(books);
-//
-//            books.add(book);
-//            return bookRepo.saveAll(books);
-//        }
         return bookRepo.saveAll(books);
     }
 
